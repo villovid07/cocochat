@@ -1,0 +1,25 @@
+.bubble {
+  padding: 5px;
+  padding-left: 10px;
+  border: thin #005c4b solid;
+  background-color: #005c4b;
+  color: white;
+  margin: 10px;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.messages-other {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.messages-mine {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.messages-other .bubble {
+  border: thin #63726f solid;
+  background-color: #63726f;
+}

@@ -1,0 +1,8 @@
+<h2>Contactos</h2>
+<hr />
+<ul class="list-group">
+  <app-usuario
+    *ngFor="let contacto of contactos()"
+    [contacto]="contacto"
+  ></app-usuario>
+</ul>
