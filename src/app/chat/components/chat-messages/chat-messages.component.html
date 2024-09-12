@@ -1,11 +1,16 @@
 <div class="row card">
   <div class="card-title text-white bg-primary p-3">
-    Estas hablando con : David Villota
+    <span *ngIf="userSelected; else elseBlock">
+      Estas hablando con : {{ userSelected ? userSelected.name : "" }}
+    </span>
+    <ng-template #elseBlock> Selecciona alguien para chatear </ng-template>
   </div>
   <div class="card-body messages">
-    <app-message-bubble></app-message-bubble>
-    <app-message-bubble></app-message-bubble>
-    <app-message-bubble></app-message-bubble>
+    <app-message-bubble
+      *ngFor="let message of lstMessages$ | async"
+      [message]="message"
+      [user]="myUser"
+    ></app-message-bubble>
   </div>
   <div class="card-footer">
     <app-new-message></app-new-message>

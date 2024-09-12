@@ -7,6 +7,7 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
 import { ChatMessagesComponent } from './components/chat-messages/chat-messages.component';
 import { NewMessageComponent } from './components/new-message/new-message.component';
 import { MessageBubbleComponent } from './components/message-bubble/message-bubble.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,6 @@ import { MessageBubbleComponent } from './components/message-bubble/message-bubb
     NewMessageComponent,
     MessageBubbleComponent,
   ],
-  imports: [CommonModule, ChatRoutingModule],
+  imports: [CommonModule, ChatRoutingModule, FormsModule, ReactiveFormsModule],
 })
 export class ChatModule {}

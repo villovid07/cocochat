@@ -13,9 +13,14 @@ export interface IContactos {
 
 const initialState: IContactos[] = [
   {
-    id: v4(),
+    id: '2',
     name: 'David Villota',
     photo: 'villovid07',
+  },
+  {
+    id: '3',
+    name: 'Cokito perro',
+    photo: 'miudev',
   },
 ];
 

@@ -1,3 +1,6 @@
 .tw-followCard-avatar {
   width: 100%;
 }
+.item-usuario {
+  cursor: pointer;
+}

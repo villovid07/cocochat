@@ -1,8 +1,22 @@
-<div class="row">
-  <div class="col-10 g-0">
-    <textarea class="form-control" placeholder="Nuevo mensaje"> </textarea>
+<form [formGroup]="formMessage">
+  <div class="row">
+    <div class="col-10 g-0">
+      <textarea
+        formControlName="newMessage"
+        class="form-control"
+        placeholder="Nuevo mensaje"
+      >
+      </textarea>
+    </div>
+    <div class="col-2">
+      <button
+        type="submit"
+        class="btn btn-success"
+        [disabled]="(selectedUser$ | async) === null || !formMessage.valid"
+        (click)="enviarMensaje()"
+      >
+        Enviar
+      </button>
+    </div>
   </div>
-  <div class="col-2">
-    <button class="btn btn-success">Enviar</button>
-  </div>
-</div>
+</form>

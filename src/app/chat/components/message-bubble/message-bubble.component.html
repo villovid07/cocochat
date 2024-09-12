@@ -1,6 +1,11 @@
-<div class="messages-other">
+<div
+  [ngClass]="{
+    'messages-mine': esMiMensaje,
+    'messages-other': !esMiMensaje
+  }"
+>
   <div class="bubble">
-    <div>12/12/2024</div>
-    <div>Este es mi mensaje de prueba</div>
+    <div>{{ message.dateMessage | date : "dd/MM/yyyy" }}</div>
+    <div>{{ message.message }}</div>
   </div>
 </div>
