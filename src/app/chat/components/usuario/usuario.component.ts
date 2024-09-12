@@ -1,6 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 import { IContactos } from 'src/app/store/contactos.store';
-import { ContactoService } from '../../services/contacto.service';
+import { ContactoService } from '../../../services/contacto.service';
 
 @Component({
   selector: 'app-usuario',

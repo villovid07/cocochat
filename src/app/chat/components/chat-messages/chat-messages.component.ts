@@ -3,8 +3,8 @@ import { select, Store } from '@ngrx/store';
 import { map, Observable } from 'rxjs';
 import { AppState } from 'src/app/store/app.store';
 import { IMessage } from 'src/app/store/messages.store';
-import { SessionService } from '../../services/session.service';
-import { ContactoService } from '../../services/contacto.service';
+import { SessionService } from '../../../services/session.service';
+import { ContactoService } from '../../../services/contacto.service';
 import { IContactos } from 'src/app/store/contactos.store';
 
 @Component({

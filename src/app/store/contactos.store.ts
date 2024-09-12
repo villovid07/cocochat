@@ -1,7 +1,10 @@
 import {
+  createAction,
   createFeatureSelector,
   createReducer,
   createSelector,
+  on,
+  props,
 } from '@ngrx/store';
 import { v4 } from 'uuid';
 
@@ -24,7 +27,15 @@ const initialState: IContactos[] = [
   },
 ];
 
-export const contactosReducer = createReducer(initialState);
+export const addContactos = createAction(
+  '[CONTACTO] addContactos',
+  props<{ name:string; photo:string; }>()
+);
+
+export const contactosReducer = createReducer(initialState, 
+  on(addContactos,(state,{name, photo})=>
+  [...state, {name, photo, id:v4()}]
+));
 
 const selecContactosFeature = createFeatureSelector<IContactos[]>('contactos');
 

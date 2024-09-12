@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ContactoService } from '../../services/contacto.service';
+import { ContactoService } from '../../../services/contacto.service';
 import { Observable, Subscription } from 'rxjs';
 import { IContactos } from 'src/app/store/contactos.store';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { addMessage, IMessage } from '../../../store/messages.store';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app.store';
-import { SessionService } from '../../services/session.service';
+import { SessionService } from '../../../services/session.service';
 
 @Component({
   selector: 'app-new-message',
